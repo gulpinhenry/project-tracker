@@ -1,11 +1,12 @@
-var time = moment();
+
 
 function displayTime(){
     setInterval(function(){
-        $(".lead").text("Current time: " + time.format("MMM DD, YYYY"));
-    }, 1000)
+        var time = moment(); 
+        $(".lead").text(time.format("LLLL"));
+    }, 500)
 }
-
+displayTime();
 
 
 $('#myModal').on('shown.bs.modal', function () {
@@ -17,4 +18,4 @@ $('#myModal').on('shown.bs.modal', function () {
   });
 
 
-  displayTime();
+ 
