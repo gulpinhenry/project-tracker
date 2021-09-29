@@ -5,3 +5,9 @@ $('#myModal').on('shown.bs.modal', function () {
   $(".btn").on("click", function(){
     $('#myModal').modal('show');
   });
+
+  $(function(){
+    $('#due-date').datepicker({
+      //add min date
+    });
+  });
