@@ -1,6 +1,6 @@
 *{
 
 }
-#alert{
+.modal-body .alert{
     display: none;
 }

@@ -4,7 +4,9 @@ var typeInputEl = $("#inputType");
 var dateInputEl = $("#inputDate");
 var rateInputEl = $("#inputRate");
 var alertEl = $("#alert");
+var containsEl = $("#containsTrue");
 
+var names = [];
 function displayTime(){
     setInterval(function(){
         var time = moment(); 
@@ -33,6 +35,19 @@ var handleFormSubmit = function (event) {
     if (!nameInput || !dateInput || !typeInput || !rateInput) {
         alertEl.show();
         return;
+    }
+    else
+    {
+        if(names.includes(nameInput))
+        {
+            containsEl.show();
+            return;
+        }
+        names.push(nameInput);
+        console.log(names);
+        
+        //add name to arr, maybe check if the name already exists?
+        // the rest to local storage
     }
     
 
